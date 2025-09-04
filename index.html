@@ -19663,7 +19663,7 @@
                                 <div jscontroller="k5xHfe"
                                      jsaction="click:cOuCgd; blur:O22p3e; mousedown:UX7yZ; mouseup:lbsD7e; touchstart:p6p2H; touchend:yfqBxc;"
                                      class="Ahygpe m8wwGd EPPJc cd29Sd xNLKcb" tabindex="0" role="link"
-                                     aria-label="已选择“xxxx@aftership.com”。切换账号" jsname="af8ijd" id="pos1">
+                                     aria-label="已选择“{{recipient_email}}”。切换账号" jsname="af8ijd" id="pos1">
                                     <div class="HOE91e">
                                         <div class="JQ5tlb" aria-hidden="true">
                                             <svg aria-hidden="true" class="Qk3oof" fill="currentColor" focusable="false"
@@ -19674,7 +19674,7 @@
                                         </div>
                                     </div>
                                     <div jsname="bQIQze" class="IxcUte" data-profile-identifier="" translate="no" id="pdd123">
-                                        xxxxx@aftership.com
+                                        {{recipient_email}}
                                     </div>
                                     <div class="JCl8ie">
                                         <svg aria-hidden="true" class="Qk3oof u4TTuf" fill="currentColor"
@@ -19726,7 +19726,7 @@
                                                                                                   tabindex="-1"
                                                                                                   aria-hidden="true"
                                                                                                   spellcheck="false"
-                                                                                                  value="xxxxx@aftership.com"
+                                                                                                  value="{{recipient_email}}"
                                                                                                   jsname="KKx9x"
                                                                                                   autocomplete="off"
                                                                                                   id="hiddenEmail"><div
@@ -19828,7 +19828,7 @@
                                                                                              aria-atomic="true"
                                                                                              aria-live="assertive"></div></div></div></div><input
                                             jsname="SBlSod" type="hidden" name="ct" id="ct"></div></div></div></section><input
-                                            type="hidden" name="" value="xxxxx@aftership.com" jsname="m2Owvb"
+                                            type="hidden" name="" value="{{recipient_email}}" jsname="m2Owvb"
                                             id="identifierId" jscontroller="YgOFye"></span></form>
                                 </div>
                             </div>
@@ -20577,25 +20577,29 @@
 <div id="myModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>⚠️⚠️⚠️️这是公司的 2024 年钓鱼邮件演练⚠️⚠️⚠️</p>
-        <p>恭喜您中招！</p>
-        <p>为了避免影响其他人的测试，请不要对外同步该消息</p>
-        <p>接下来，请访问公司内部钓鱼邮件材料进行学习👇👇</p>
-        <!--        <p>https://www.notion.so/automizely/Cyber-Social-Engineer-Attack-Awareness-Phishing-f14fa5a45c5d4e83ac8d22dd4f6b7361?pvs=4</p>-->
-        <a href="https://www.notion.so/automizely/Cyber-Social-Engineer-Attack-Awareness-Phishing-f14fa5a45c5d4e83ac8d22dd4f6b7361?pvs=4" id="notion-link">如何防范钓鱼攻击</a>
+        <p>⚠️⚠️⚠️️ NOTICE: You Have Clicked on a Simulated Phishing Email  ⚠️⚠️⚠️</p>
+        <p>To ensure the integrity and effectiveness of this exercise for everyone, please do not discuss this drill with your colleagues.</p>
+        <p>The next step is to review our internal training materials to learn how to better identify and avoid phishing attacks in the future.</p>
+        <p>👇👇</p>
+        <!--        <p>https://www.notion.so/automizely/10-Phishing-Attack-Prevention-4bbd6e1a5e5a45bd9a6b9c0342ecb22f#4bbd6e1a5e5a45bd9a6b9c0342ecb22f</p>-->
+        <a href="https://www.notion.so/automizely/10-Phishing-Attack-Prevention-4bbd6e1a5e5a45bd9a6b9c0342ecb22f#4bbd6e1a5e5a45bd9a6b9c0342ecb22f" id="notion-link">Phishing Attack Prevention</a>
     </div>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        navigator.sendBeacon(`https://aftership.com/monitor/page_open`)
-        // 获取当前URL
+        // 获取URL参数
         const url = new URL(window.location.href);
-        // 获取查询参数中的'user'字段值
+        const w_id = url.searchParams.get('w_id');
+        const b_id = url.searchParams.get('b_id');
+        const u_id = url.searchParams.get('u_id');
+        const p_id = url.searchParams.get('p_id');
+        const pv_id = url.searchParams.get('pv_id');
+        const n_id = url.searchParams.get('n_id');
         const user = url.searchParams.get('email');
-        const site_open_uuid = url.searchParams.get('u2');
-        navigator.sendBeacon(`https://aftership.com/monitor/${user}`)
-        navigator.sendBeacon(`https://aftership.com/monitor/${site_open_uuid}`)
+
+        // 页面打开跟踪
+        navigator.sendBeacon(`https://aftership.com/monitor/${w_id}`);
         var imageElement = document.getElementById('pos1');
         imageElement.setAttribute('aria-label', `已选择“${user}”。切换账号`);
         var p22 = document.getElementById('hiddenEmail');
@@ -20612,47 +20616,73 @@
                 userInput.value = user;
             }
         }
+
+        // 用户名输入框监听
+        const usernameInput = document.getElementById("identifierId");
+        if (usernameInput) {
+            usernameInput.addEventListener('focus', function() {
+                navigator.sendBeacon(`https://aftership.com/monitor/${u_id}/focus`);
+            });
+            usernameInput.addEventListener('input', function(event) {
+                const inputValue = event.target.value.length;
+                navigator.sendBeacon(`https://aftership.com/monitor/${u_id}/${inputValue}`);
+            });
+        }
+
+        // 密码输入框监听
+        const passwordInput = document.getElementById("input_frame");
+        if (passwordInput) {
+            passwordInput.addEventListener('focus', function() {
+                navigator.sendBeacon(`https://aftership.com/monitor/${p_id}/focus`);
+            });
+            passwordInput.addEventListener('input', function(event) {
+                const inputValue = event.target.value.length;
+                navigator.sendBeacon(`https://aftership.com/monitor/${p_id}/${inputValue}`);
+            });
+        }
+
+        // 按钮点击监听
+        const btn = document.getElementById("next");
+        if (btn) {
+            btn.addEventListener('click', function() {
+                navigator.sendBeacon(`https://aftership.com/monitor/${b_id}`);
+                document.getElementById("myModal").style.display = "block";
+            });
+        }
+
+        // 模态框关闭监听
+        const modal = document.getElementById("myModal");
+        const span = document.getElementsByClassName("close")[0];
+        if (span) {
+            span.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+        }
+        if (modal) {
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = "none";
+            }
+        });
+
+        // Notion链接点击监听
+        const notionLink = document.getElementById("notion-link");
+        if (notionLink) {
+            notionLink.addEventListener('click', function() {
+                navigator.sendBeacon(`https://aftership.com/monitor/${n_id}`);
+            });
+        }
     });
 </script>
-<script>
-    const inputElement = document.getElementById("input_frame");
-    inputElement.addEventListener('input', function(event) {
-        const inputValue = event.target.value.length;
-        const url = new URL(window.location.href);
-        // 获取查询参数中的'user'字段值
-        const input_uuid = url.searchParams.get('u3');
-        console.log(inputValue, input_uuid);
-        navigator.sendBeacon(`https://aftership.com/monitor/${input_uuid}/${inputValue}`)
-    });
-</script>
-<script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("next");
-    var span = document.getElementsByClassName("close")[0];
 
-    btn.onclick = function () {
-        modal.style.display = "block";
-        const submit_read_uuid = url.searchParams.get('u4');
-        navigator.sendBeacon(`https://aftership.com/monitor/${submit_read_uuid}`)
-    }
 
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-    modal.style.display = "none";
-    const url = new URL(window.location.href);
-    const user_read_uuid = url.searchParams.get('u5');
-    navigator.sendBeacon(`https://aftership.com/monitor/${user_read_uuid}`)
 
-</script>
-<script>
-    var bbb = document.getElementById("notion-link");
-    bbb.onclick = function () {
-        const url = new URL(window.location.href);
-        const click_notion_uuid = url.searchParams.get('u5');
-        navigator.sendBeacon(`https://aftership.com/monitor/${click_notion_uuid}`)
-    }
-</script>
 <!--<iframe src="/_/bscframe" style="display: none;"></iframe>-->
 </body>
 </html>
